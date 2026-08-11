@@ -1,70 +1,49 @@
-// Este componente exibe uma galeria de produtos utilizando um grid responsivo.
-// Cada card representa um produto ou modelo, com destaque para o principal.
-// O overlay do card principal exibe informações e botões de ação.
-import galeriaHomem from "../../assets/images/galeria-homem.jpg";
-import galeriaTenisRoxo from "../../assets/images/galeria-tenis-roxo.jpg";
-import galeriaModelo from "../../assets/images/galeria-modelo.jpg";
-import galeriaTenisColorido from "../../assets/images/galeria-tenis-colorido.jpg";
-import galeriaTenisBrancoPeto from "../../assets/images/galeria-tenis-branco-e-preto.jpg";
-import galeriaTenisCinza from "../../assets/images/galeria-tenis-cinza.jpg";
-import styles from "./Gallery.module.css";
-import { Overlay } from "../Overlay";
+import banner from "@/assets/images/card_imagem.jpg";
+import tenisRoxo from "@/assets/images/galeria-tenis-roxo.jpg";
+import tenisCinza from "@/assets/images/galeria-tenis-cinza.jpg";
+import tenisBrancoEPreto from "@/assets/images/galeria-tenis-branco-e-preto.jpg";
+import tenisColorido from "@/assets/images/galeria-tenis-colorido.jpg";
+import modelo from "@/assets/images/galeria-modelo.jpg";
 import { Button } from "../Button";
+import { GalleryCard } from "../GalleryCard";
+import { Overlay } from "../Overlay";
 
-// Componente principal da galeria
 export const Gallery = () => {
   return (
-    // Container principal da galeria
-    <div className="container">
-      {/* Grid da galeria, definido pelo CSS Modules */}
-      <div className={styles.galleryGrid}>
-        {/* Highlight - Modelo Masculino (galeria-homem.jpg) */}
-        {/* Card de destaque com overlay e botões */}
-        <div className={`${styles.imageCard} ${styles.highlight}`}>
-          <img
-            src={galeriaHomem}
-            alt="Krypton One - Estilo urbano com atitude"
-          />
+    <section className="container grid grid-cols-12 gap-2.5 md:gap-7 mb-10 grid-rows-[200px_1fr_100px] md:grid-rows-none">
+      <GalleryCard
+        src={banner}
+        className="col-span-12 md:col-span-6 row-span-3 order-1"
+      >
+        <Overlay
+          subtitle="Estilo urbano com atitude."
+          className="inset-0 justify-center items-center"
+        >
+          <Button variant="secondary">Feminino</Button>
+          <Button variant="secondary">Masculino</Button>
+        </Overlay>
+      </GalleryCard>
 
-          <Overlay
-            title="Krypton One"
-            subtitle="Estilo Urbano com atitude"
-            className="inset-0 justify-center"
-          >
-            <Button variant="secondary">Feminino</Button>
-            <Button variant="secondary">Masculino</Button>
-          </Overlay>
-        </div>
-        {/* Sneaker Purple - Tênis Roxo (galeria-tenis-roxo.jpg) */}
-        {/* Card do tênis roxo */}
-        <div className={`${styles.imageCard} ${styles.sneakerPurple}`}>
-          <img src={galeriaTenisRoxo} alt="Tênis Roxo" />
-        </div>
-
-        {/* Model - Modelo Feminina (galeria-modelo.jpg) */}
-        {/* Card da modelo feminina */}
-        <div className={`${styles.imageCard} ${styles.model}`}>
-          <img src={galeriaModelo} alt="Modelo Feminina" />
-        </div>
-
-        {/* Sneaker Color - Tênis Colorido (galeria-tenis-colorido.jpg) */}
-        {/* Card do tênis colorido */}
-        <div className={`${styles.imageCard} ${styles.sneakerColor}`}>
-          <img src={galeriaTenisColorido} alt="Tênis Colorido" />
-        </div>
-
-        {/* Sneaker White - Tênis Branco e Preto (galeria-tenis-branco-e-preto.jpg) */}
-        {/* Card do tênis branco e preto */}
-        <div className={`${styles.imageCard} ${styles.sneakerWhite}`}>
-          <img src={galeriaTenisBrancoPeto} alt="Tênis Branco e Preto" />
-        </div>
-
-        {/* Sneaker Silver - Tênis Cinza (galeria-tenis-cinza.jpg) */}
-        {/* Card do tênis cinza */}
-        <div className={`${styles.imageCard} ${styles.sneakerSilver}`}>
-          <img src={galeriaTenisCinza} alt="Tênis Cinza" />
-        </div>
-      </div>
-    </div>
+      <GalleryCard
+        src={tenisRoxo}
+        className="col-span-12 row-span-1 md:col-span-6 order-5 md:order-2"
+      />
+      <GalleryCard
+        src={modelo}
+        className="col-span-6 md:col-span-3 row-span-6 order-3"
+      />
+      <GalleryCard
+        src={tenisColorido}
+        className="col-span-6 md:col-span-3 row-span-3 order-4"
+      />
+      <GalleryCard
+        src={tenisBrancoEPreto}
+        className="col-span-12 md:col-span-6 row-span-4 order-2 md:order-5"
+      />
+      <GalleryCard
+        src={tenisCinza}
+        className="col-span-6 md:col-span-3 row-span-3 order-4 md:order-6"
+      />
+    </section>
   );
 };
