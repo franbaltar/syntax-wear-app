@@ -9,7 +9,7 @@ export const registerUserFormSchema = z
 
     lastName: z.string().min(1, "Último nome é obrigatório").trim(),
 
-    email: z.email("E-mail inválido").nonempty("E-mail é obrigatório"),
+    email: z.email("E-mail inválido"),
 
     password: z.string().min(8, "A senha deve ter no mínimo 8 caracteres"),
 
@@ -38,7 +38,7 @@ export const registerUserFormSchema = z
 
 type RegisterFormData = z.infer<typeof registerUserFormSchema>;
 
-export function RegisterForm() {
+export const useRegisterForm = () => {
   const {
     register,
     handleSubmit,
