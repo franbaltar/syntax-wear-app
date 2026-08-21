@@ -12,7 +12,7 @@ import MensCruiser from "@/assets/images/cruiser_blizzard_blizzard.webp";
 export const products = [
   {
     id: 1,
-    name: "Mens tree dasher 2",
+    name: "Men's Tree Dasher 2",
     image: MensTreeDasher,
     price: 135,
     color: "Natural Black/Royal blue",
@@ -21,7 +21,7 @@ export const products = [
   },
   {
     id: 2,
-    name: "Mens tree runner nz",
+    name: "Men's Tree Runner NZ",
     image: MensTreeRunnerNz,
     price: 110,
     color: "Weathered Brown",
@@ -30,7 +30,7 @@ export const products = [
   },
   {
     id: 3,
-    name: "Mens wool cruiser",
+    name: "Men's Wool Cruiser",
     image: MensWoolCruiser,
     price: 100,
     color: "Burgundy",
@@ -39,7 +39,7 @@ export const products = [
   },
   {
     id: 4,
-    name: "Mens wool cruiser slip on",
+    name: "Men's Wool Cruiser Slip On",
     image: MensWoolCruiserSlipOn,
     price: 95,
     color: "Dark Grey",
@@ -48,7 +48,7 @@ export const products = [
   },
   {
     id: 5,
-    name: "Mens wool cruiser waterproof",
+    name: "Men's Wool Cruiser Waterproof",
     image: MensWoolCruiserWaterproof,
     price: 140,
     color: "Natural Black",
@@ -57,7 +57,7 @@ export const products = [
   },
   {
     id: 6,
-    name: "Mens wool runner nz waterproof",
+    name: "Men's Wool Runner NZ Waterproof",
     image: MensWoolRunnerNzWaterproof,
     price: 150,
     color: "Medium Grey",
@@ -66,7 +66,7 @@ export const products = [
   },
   {
     id: 7,
-    name: "Mens wool runner nz mid waterproof",
+    name: "Men's Wool Runner NZ mid Waterproof",
     image: MensWoolRunnerNzMidWaterproof,
     price: 160,
     color: "Natural Black",
@@ -75,7 +75,7 @@ export const products = [
   },
   {
     id: 8,
-    name: "Mens strider explore",
+    name: "Men's Strider Explore",
     image: MensStriderExplore,
     price: 130,
     color: "Rustic Green",
@@ -84,7 +84,7 @@ export const products = [
   },
   {
     id: 9,
-    name: "Mens cruiser mid explore",
+    name: "Men's Cruiser mid Explore",
     image: MensCruiserMidExplore,
     price: 140,
     color: "Rustic Green",
@@ -93,7 +93,7 @@ export const products = [
   },
   {
     id: 10,
-    name: "Mens cruiser",
+    name: "Men's Cruiser",
     image: MensCruiser,
     price: 100,
     color: "Blizzard",
