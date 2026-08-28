@@ -51,7 +51,8 @@ function RouteComponent() {
               <h2 className="text-3xl mb-5">Atendimento sob medida</h2>
 
               <p>
-                Conte com dicas de estilo, sugestões exclusivas e suporte personalizado de quem realmente entende de moda.
+                Conte com dicas de estilo, sugestões exclusivas e suporte
+                personalizado de quem realmente entende de moda.
               </p>
             </div>
           </div>
