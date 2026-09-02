@@ -1,7 +1,9 @@
 import Banner from "@/assets/images/banner.jpg";
 import { Button } from "../Button";
+import { useRouter } from "@tanstack/react-router";
 
 export const Hero = () => {
+  const router = useRouter();
   return (
     <div className="container">
       <section className="relative h-125 rounded-[20px] mb-10">
@@ -21,7 +23,15 @@ export const Hero = () => {
             </h1>
 
             <div className="flex gap-3.5">
-              <Button variant="secondary" size="sm">
+              <Button
+                variant="secondary"
+                onClick={() =>
+                  router.navigate({
+                    to: "/products",
+                  })
+                }
+                size="sm"
+              >
                 Ver modelos
               </Button>
               <Button>Comprar</Button>

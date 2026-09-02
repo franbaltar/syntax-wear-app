@@ -11,9 +11,9 @@ export interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { name: "Masculino", href: "/products" },
-  { name: "Feminino", href: "/products" },
-  { name: "Outlet", href: "/products" },
+  { name: "Masculino", href: "/products/category/masculino" },
+  { name: "Feminino", href: "/products/category/feminino" },
+  { name: "Outlet", href: "/products/category/outlet" },
 ];
 
 export const Header = () => {
