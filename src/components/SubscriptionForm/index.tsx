@@ -1,7 +1,7 @@
 export const SubscriptionForm = () => {
   return (
     <form className="flex flex-col">
-      <label htmlFor="newsletter">Inscreva-se em nosso e-mail</label>
+      <label htmlFor="newsletter" className="flex justify-center mb-4">Inscreva-se em nosso e-mail!</label>
       <input
         type="email"
         id="newsletter"

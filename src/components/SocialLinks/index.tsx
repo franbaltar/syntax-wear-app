@@ -13,13 +13,19 @@ const socialLinks = [
 export const SocialLinks = () => {
   return (
     <div>
-      <p className="mb-4 text-xl font-medium text-surface-alt">Redes Sociais</p>
+      <p className="justify-center flex gap-8 mb-4 text-xl font-medium text-surface-alt">
+        Redes Sociais
+      </p>
 
-      <ul className="flex gap-5">
+      <ul className="justify-center flex gap-5 mb-4">
         {socialLinks.map(({ href, icon, name }) => (
           <li key={name}>
-            <a href={href} aria-label={name}>
-              <img src={icon} alt={name} />
+            <a href={href} aria-label={name} className="group">
+              <img
+                src={icon}
+                alt={name}
+                className="transition-[filter] group-hover:filter-[brightness(0)_saturate(100%)_invert(34%)_sepia(96%)_saturate(2500%)_hue-rotate(242deg)_brightness(94%)_contrast(91%)] duration-10"
+              />
             </a>
           </li>
         ))}

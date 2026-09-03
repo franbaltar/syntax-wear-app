@@ -22,7 +22,7 @@ export const products = [
   },
   {
     id: 2,
-    name: "Men's Tree Runner NZ",
+    name: "Women's Tree Runner NZ",
     image: MensTreeRunnerNz,
     price: 110,
     color: "Weathered Brown",
