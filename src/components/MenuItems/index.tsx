@@ -14,7 +14,7 @@ export const MenuItems = () => {
         <nav key={title}>
           <ul className="flex flex-col gap-4 items-center">
             <li>
-              <p className="font-normal text-surface-alt text-[25px] underline">
+              <p className="font-normal text-surface-alt text-[20px] underline">
                 {title}
               </p>
             </li>

@@ -7,7 +7,7 @@ export const RegisterForm = () => {
     <form className="text-black">
       {/* { campo de e-mail } */}
       <div>
-        <label className="text-xs text-gray-600">E-mail*</label>
+        <label className="dark-form-label text-xs text-gray-600">E-mail*</label>
 
         <input
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${errors.email ? "border-red-500 focus:ring-red-400" : "border-border focus:ring-accent"}`}
@@ -21,7 +21,7 @@ export const RegisterForm = () => {
       </div>
 
       <div>
-        <label className="text-xs text-gray-600">Senha*</label>
+        <label className="dark-form-label text-xs text-gray-600">Senha*</label>
 
         <input
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${errors.password ? "border-red-500 focus:ring-red-400" : "border-border focus:ring-accent"}`}
@@ -35,7 +35,9 @@ export const RegisterForm = () => {
       </div>
 
       <div>
-        <label className="text-xs text-gray-600">Confirmar senha*</label>
+        <label className="dark-form-label text-xs text-gray-600">
+          Confirmar senha*
+        </label>
 
         <input
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${errors.confirmPassword ? "border-red-500 focus:ring-red-400" : "border-border focus:ring-accent"}`}
@@ -51,7 +53,7 @@ export const RegisterForm = () => {
       </div>
 
       <div>
-        <label className="text-xs text-gray-600">Nome*</label>
+        <label className="dark-form-label text-xs text-gray-600">Nome*</label>
 
         <input
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${errors.firstName ? "border-red-500 focus:ring-red-400" : "border-border focus:ring-accent"}`}
@@ -60,14 +62,14 @@ export const RegisterForm = () => {
         />
 
         {errors.firstName && (
-          <p className="text-xs text-error mt-1">
-            {errors.firstName.message}
-          </p>
+          <p className="text-xs text-error mt-1">{errors.firstName.message}</p>
         )}
       </div>
 
       <div>
-        <label className="text-xs text-gray-600">Sobrenome*</label>
+        <label className="dark-form-label text-xs text-gray-600">
+          Sobrenome*
+        </label>
 
         <input
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${errors.lastName ? "border-red-500 focus:ring-red-400" : "border-border focus:ring-accent"}`}
@@ -81,7 +83,7 @@ export const RegisterForm = () => {
       </div>
 
       <div>
-        <label className="text-xs text-gray-600">CPF*</label>
+        <label className="dark-form-label text-xs text-gray-600">CPF*</label>
 
         <input
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${errors.cpf ? "border-red-500 focus:ring-red-400" : "border-border focus:ring-accent"}`}
@@ -95,7 +97,9 @@ export const RegisterForm = () => {
       </div>
 
       <div>
-        <label className="text-xs text-gray-600">Data de nascimento*</label>
+        <label className="dark-form-label text-xs text-gray-600">
+          Data de nascimento*
+        </label>
 
         <input
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${errors.birthDate ? "border-red-500 focus:ring-red-400" : "border-border focus:ring-accent"}`}
@@ -104,14 +108,14 @@ export const RegisterForm = () => {
         />
 
         {errors.birthDate && (
-          <p className="text-xs text-error mt-1">
-            {errors.birthDate.message}
-          </p>
+          <p className="text-xs text-error mt-1">{errors.birthDate.message}</p>
         )}
       </div>
 
       <div>
-        <label className="text-xs text-gray-600">Telefone*</label>
+        <label className="dark-form-label text-xs text-gray-600">
+          Telefone*
+        </label>
 
         <input
           className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${errors.cellphone ? "border-red-500 focus:ring-red-400" : "border-border focus:ring-accent"}`}
@@ -120,9 +124,7 @@ export const RegisterForm = () => {
         />
 
         {errors.cellphone && (
-          <p className="text-xs text-error mt-1">
-            {errors.cellphone.message}
-          </p>
+          <p className="text-xs text-error mt-1">{errors.cellphone.message}</p>
         )}
       </div>
 

@@ -1,13 +1,15 @@
 export const SubscriptionForm = () => {
   return (
     <form className="flex flex-col">
-      <label htmlFor="newsletter" className="flex justify-center mb-4">Inscreva-se em nosso e-mail!</label>
+      <label htmlFor="newsletter" className="flex justify-center mb-4">
+        Inscreva-se em nosso e-mail!
+      </label>
       <input
         type="email"
         id="newsletter"
         name="newsletter"
         placeholder="email@email.com"
-        className="rounded-[30px] text-black bg-white py-3 px-5 placeholder-border-alt"
+        className="newsletter-input rounded-[30px] text-black bg-white py-3 px-5 placeholder-border-alt"
       />
     </form>
   );

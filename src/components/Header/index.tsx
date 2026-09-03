@@ -4,7 +4,8 @@ import { Link } from "@tanstack/react-router";
 import { MenuMobile } from "../MenuMobile";
 import { CartButton } from "../CartButton";
 import { CartDrawer } from "../CartDrawer";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "../../contexts/CartContext";
 
 export interface NavLink {
   name: string;
@@ -18,12 +19,20 @@ const navLinks: NavLink[] = [
 ];
 
 export const Header = () => {
-  const [cartIsOpen, setCartIsOpen] = useState<boolean>(false);
+  const { cartIsOpen, openCart, closeCart } = useContext(CartContext);
+  const [darkMode, setDarkMode] = useState(
+    () => localStorage.getItem("dark-mode") === "true",
+  );
+
+  useEffect(() => {
+    document.body.classList.toggle("dark-mode", darkMode);
+    localStorage.setItem("dark-mode", String(darkMode));
+  }, [darkMode]);
 
   return (
     <div className="relative">
       <header className="fixed top-5 left-0 right-0 z-10 mx-10">
-        <div className="bg-white text-black max-w-330 mx-auto flex justify-between items-center py-3 px-7 rounded-2xl mt-5">
+        <div className="dark-header bg-white text-black max-w-330 mx-auto flex justify-between items-center py-3 px-7 rounded-2xl mt-5">
           <Link to="/">
             <img src={Logo} alt="Logo SyntaxWear" className="w-32 md:w-36" />
           </Link>
@@ -40,6 +49,17 @@ export const Header = () => {
 
           <nav>
             <ul className="flex gap-4 md:gap-10 items-center">
+              <li>
+                <button
+                  type="button"
+                  aria-label="Alternar modo escuro"
+                  aria-pressed={darkMode}
+                  onClick={() => setDarkMode((isDark) => !isDark)}
+                  className="text-xl hover:text-accent transition-colors cursor-pointer"
+                >
+                  ◐
+                </button>
+              </li>
               <li className="hidden lg:block">
                 <Link to="/our-stores">Nossas lojas</Link>
               </li>
@@ -55,14 +75,14 @@ export const Header = () => {
                 </Link>
               </li>
               <li>
-                <CartButton onClick={() => setCartIsOpen(true)} />
+                <CartButton onClick={openCart} />
               </li>
             </ul>
           </nav>
         </div>
       </header>
 
-      <CartDrawer isOpen={cartIsOpen} onClose={() => setCartIsOpen(false)} />
+      <CartDrawer isOpen={cartIsOpen} onClose={closeCart} />
     </div>
   );
 };

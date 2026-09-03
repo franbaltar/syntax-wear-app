@@ -1,9 +1,12 @@
 import Banner from "@/assets/images/banner.jpg";
 import { Button } from "../Button";
 import { useRouter } from "@tanstack/react-router";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
 
 export const Hero = () => {
   const router = useRouter();
+  const { openCart } = useContext(CartContext);
   return (
     <div className="container">
       <section className="relative h-125 rounded-[20px] mb-10">
@@ -31,10 +34,18 @@ export const Hero = () => {
                   })
                 }
                 size="sm"
+                className="w-32"
               >
-                Ver modelos
+                Modelos
               </Button>
-              <Button>Comprar</Button>
+              <Button
+                variant="secondary"
+                size="sm"
+                className="w-32"
+                onClick={openCart}
+              >
+                Comprar
+              </Button>
             </div>
           </div>
         </div>

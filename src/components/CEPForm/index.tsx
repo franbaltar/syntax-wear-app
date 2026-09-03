@@ -51,12 +51,16 @@ export const CEPForm = () => {
 
   return (
     <>
-      <form className="flex gap-3" onSubmit={handleSubmit(onSubmit)} noValidate>
+      <form
+        className="flex items-start gap-3"
+        onSubmit={handleSubmit(onSubmit)}
+        noValidate
+      >
         <div className="flex flex-col flex-1">
           <input
             type="text"
             placeholder="Insira seu CEP"
-            className={`border border-border rouded-md p-3 ${errors.cep ? "text-error" : ""}`}
+            className={`cep-input border border-border rouded-md p-3 ${errors.cep ? "text-error" : ""}`}
             {...register("cep")}
           />
           {errors.cep && (

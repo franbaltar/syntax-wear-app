@@ -13,11 +13,11 @@ export const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
   return (
     <>
       <div
-        className={`${isOpen ? "bg-black/70 visible" : "bg-transparent invisible"} text-black fixed inset-0 z-50 transition-all duration-600 ease-in-out`}
+        className={`${isOpen ? "bg-black/70 opacity-100 visible" : "bg-transparent opacity-0 invisible"} text-black fixed inset-0 z-50 transition-[opacity,visibility,background-color] duration-500 ease-in-out`}
         onClick={onClose}
       >
         <div
-          className={`${isOpen ? "translate-x-0" : "translate-x-full"} absolute top-0 right-0 bottom-0 bg-white pt-6 transition-all duration-500 ease-in-out w-75 md:w-100`}
+          className={`${isOpen ? "translate-x-0" : "translate-x-full"} absolute top-0 right-0 bottom-0 bg-white pt-6 transition-transform duration-500 ease-out w-75 md:w-100`}
           onClick={(e) => e.stopPropagation()}
         >
           <header className="flex items-center justify-between px-5">

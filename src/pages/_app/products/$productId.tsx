@@ -50,19 +50,19 @@ function RouteComponent() {
 
   return (
     <section className="container mb-10 pt-44 md:pt-54 pb-10 md:px-10">
-      <nav className="text-black text-sm mb-15 ml-5">
+      <nav className="text-black text-sm mb-10 md:mb-15 ml-0 px-2 md:px-0">
         <Link to="/">Home</Link> / <Link to="/products">Produtos</Link> /{" "}
         <span className="font-semibold">{filteredProduct?.name}</span>
       </nav>
 
-      <div className="flex justify-center gap-10">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-10">
         <img
           src={filteredProduct?.image}
           alt={filteredProduct?.name}
-          className="w-125 bg-white rounded-2xl"
+          className="dark-product-image w-full max-w-125 bg-white rounded-2xl"
         />
 
-        <div className="text-black">
+        <div className="text-black w-full max-w-125">
           <h1 className="text-4xl font-bold mb-1">{filteredProduct?.name}</h1>
 
           <p className="mb-2">Cor: {filteredProduct?.color}</p>
@@ -70,7 +70,7 @@ function RouteComponent() {
           <p className="line-through text-sm text-[#878787]">
             {currencyFormat(originalPrice)}
           </p>
-          <p className="text-3xl font-bold mb-2">
+          <p className="dark-product-price text-3xl font-bold mb-2">
             {currencyFormat(discountPrice)} no PIX
           </p>
 
@@ -78,14 +78,16 @@ function RouteComponent() {
             Você economiza: <span className="font-semibold">10%</span>
           </p>
           <p className="mb-2">
-            ou <span className="text-[#38373A] font-semibold">6x</span> de{" "}
-            <span className="text-[#38373A] font-semibold">
+            ou{" "}
+            <span className="dark-product-installment font-semibold">6x</span>{" "}
+            de{" "}
+            <span className="dark-product-installment font-semibold">
               {" "}
               {currencyFormat(inInstallmentsPrice)}
             </span>
           </p>
 
-          <p className="max-w-125 my-5">{filteredProduct?.description}</p>
+          <p className="my-5">{filteredProduct?.description}</p>
 
           <div className="mb-6">
             <p className="text-sm">Calcular o prazo de entrega</p>

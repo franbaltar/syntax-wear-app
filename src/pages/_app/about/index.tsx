@@ -5,7 +5,7 @@ export const Route = createFileRoute("/_app/about/")({
   component: RouteComponent,
   head: () => ({
     meta: [{ title: "Sobre - SyntaxWear" }],
-  })
+  }),
 });
 
 function RouteComponent() {
@@ -33,7 +33,7 @@ function RouteComponent() {
 
         <Link
           to="/our-stores"
-          className="self-start text-xs font-bold text-[#333333] uppercase border-b-2 tracking-[2.5px] hover:text-accent transition-colors duration-500"
+          className="dark-about-link self-start text-xs font-bold text-[#333333] uppercase border-b-2 tracking-[2.5px] hover:text-accent transition-colors duration-500"
         >
           Saiba mais sobre nossas lojas
         </Link>

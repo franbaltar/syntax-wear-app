@@ -52,6 +52,100 @@ body {
   font-family: var(--font-display);
   color: #ffffff;
   background-color: var(--color-surface);
+  transition:
+    color 300ms ease,
+    background-color 300ms ease;
+}
+
+body,
+body * {
+  transition:
+    color 300ms ease,
+    background-color 300ms ease;
+}
+
+body.dark-mode {
+  color: hsl(0, 0%, 92%);
+  background-color: hsl(263, 18%, 15%);
+}
+
+body.dark-mode .bg-white,
+body.dark-mode .bg-surface,
+body.dark-mode .bg-background {
+  background-color: hsl(263, 18%, 15%);
+}
+
+body.dark-mode .text-black,
+body.dark-mode .text-text,
+body.dark-mode .text-text-secondary,
+body.dark-mode .text-gray-text {
+  color: hsl(0, 0%, 92%);
+}
+
+body.dark-mode .dark-header {
+  color: hsl(0, 0%, 94%);
+  background-color: hsl(263, 25%, 24%);
+}
+
+body.dark-mode .dark-product-card,
+body.dark-mode .dark-auth-card {
+  background-color: hsl(263, 22%, 22%);
+}
+
+body.dark-mode .dark-product-image {
+  background-color: hsl(263, 22%, 22%);
+}
+
+body.dark-mode .dark-auth-card {
+  color: hsl(0, 0%, 92%);
+}
+
+body.dark-mode .dark-form-label {
+  color: #ffffff;
+}
+
+body.dark-mode .dark-google-button:hover,
+body.dark-mode .dark-google-button:hover .text-black {
+  color: #000000;
+}
+
+body.dark-mode .dark-about-link {
+  color: #ffffff;
+}
+
+body.dark-mode .dark-about-link:hover {
+  color: var(--color-accent);
+}
+
+body.dark-mode .dark-product-installment {
+  color: #ffffff;
+}
+
+body.dark-mode .dark-product-price {
+  color: #ffffff;
+}
+
+.cep-input::placeholder {
+  color: #000000;
+  opacity: 0.5;
+  transition: opacity 200ms ease;
+}
+
+body.dark-mode .cep-input::placeholder {
+  color: #ffffff;
+}
+
+.cep-input:focus::placeholder {
+  opacity: 0;
+}
+
+.newsletter-input::placeholder {
+  opacity: 0.5;
+  transition: opacity 200ms ease;
+}
+
+.newsletter-input:focus::placeholder {
+  opacity: 0;
 }
 
 /* Esconde scrollbar no Chrome, Safari e Edge */

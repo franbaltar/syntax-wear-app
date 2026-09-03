@@ -12,7 +12,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const { add } = useContext(CartContext);
 
   return (
-    <div className="bg-white rounded-2xl shadow-md">
+    <div className="dark-product-card bg-white rounded-2xl shadow-md">
       <Link
         to="/products/$productId"
         params={{ productId: String(product.id) }}
@@ -30,7 +30,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         <p>{product.color}</p>
 
         <div className="flex justify-between mt-2.5">
-          <p className="font-bold">R${product.price},00</p>
+          <p className="dark-product-price font-bold">R${product.price},00</p>
 
           <button className="cursor-pointer" onClick={() => add(product)}>
             <MdAddShoppingCart className="h-7 w-7" />

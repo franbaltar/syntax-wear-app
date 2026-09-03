@@ -4,10 +4,14 @@ import iconTikTok from "@/assets/images/icon-tiktok.png";
 import iconWhatsapp from "@/assets/images/icon-whatsapp.png";
 
 const socialLinks = [
-  { href: "#", icon: iconInstagram, name: "Instagram" },
-  { href: "#", icon: iconFacebook, name: "Facebook" },
-  { href: "#", icon: iconTikTok, name: "TikTok" },
-  { href: "#", icon: iconWhatsapp, name: "WhatsApp" },
+  {
+    href: "https://www.instagram.com/",
+    icon: iconInstagram,
+    name: "Instagram",
+  },
+  { href: "https://www.facebook.com/", icon: iconFacebook, name: "Facebook" },
+  { href: "https://www.tiktok.com/", icon: iconTikTok, name: "TikTok" },
+  { href: "https://www.whatsapp.com/", icon: iconWhatsapp, name: "WhatsApp" },
 ];
 
 export const SocialLinks = () => {
@@ -20,7 +24,13 @@ export const SocialLinks = () => {
       <ul className="justify-center flex gap-5 mb-4">
         {socialLinks.map(({ href, icon, name }) => (
           <li key={name}>
-            <a href={href} aria-label={name} className="group">
+            <a
+              href={href}
+              aria-label={name}
+              target="_blank"
+              rel="noreferrer"
+              className="group"
+            >
               <img
                 src={icon}
                 alt={name}

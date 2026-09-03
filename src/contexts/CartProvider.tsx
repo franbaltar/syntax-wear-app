@@ -20,6 +20,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
       ? JSON.parse(cartFromLocalStorage)
       : [];
   });
+  const [cartIsOpen, setCartIsOpen] = useState(false);
 
   useEffect(() => {
     localStorage.setItem(localStorageKey, JSON.stringify(cart));
@@ -56,6 +57,14 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     updateProductQuantity(product, product.quantity - 1);
   }
 
+  function openCart(): void {
+    setCartIsOpen(true);
+  }
+
+  function closeCart(): void {
+    setCartIsOpen(false);
+  }
+
   function updateProductQuantity(
     product: ProductCart,
     newQuantity: number,
@@ -85,6 +94,9 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         remove,
         increment,
         decrement,
+        cartIsOpen,
+        openCart,
+        closeCart,
       }}
     >
       {children}
