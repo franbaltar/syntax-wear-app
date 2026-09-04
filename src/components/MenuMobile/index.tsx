@@ -15,10 +15,15 @@ export const MenuMobile = ({ navLinks }: MenuMobileProps) => {
   return (
     <>
       <button
-        className="cursor-pointer"
+        type="button"
+        className="max-lg:w-8 max-lg:h-8 max-lg:flex max-lg:items-center max-lg:justify-center cursor-pointer"
         onClick={() => setMenuIsOpen(!menuIsOpen)}
       >
-        <img src={IconMenu} alt="Ícone menu" />
+        <img
+          className="max-lg:w-6 max-lg:h-6 object-contain"
+          src={IconMenu}
+          alt="Ícone menu"
+        />
       </button>
 
       <div
@@ -35,7 +40,10 @@ export const MenuMobile = ({ navLinks }: MenuMobileProps) => {
                 <FaRegUserCircle className="h-6 w-6" />
                 <p>Olá! Faça seu login</p>
               </Link>
-              <IoMdClose className="cursor-pointer text-2xl" onClick={() => setMenuIsOpen(!menuIsOpen)}/>
+              <IoMdClose
+                className="cursor-pointer text-2xl"
+                onClick={() => setMenuIsOpen(!menuIsOpen)}
+              />
             </nav>
           </header>
           <ul className="p-4 overflow-y-auto scrollbar-hide h-[calc(100%-140px)] flex flex-col gap-3">
@@ -49,10 +57,14 @@ export const MenuMobile = ({ navLinks }: MenuMobileProps) => {
               </Link>
             ))}
             <li>
-              <Link to="/our-stores" onClick={() => setMenuIsOpen(!menuIsOpen)}>Nossas Lojas</Link>
+              <Link to="/our-stores" onClick={() => setMenuIsOpen(!menuIsOpen)}>
+                Nossas Lojas
+              </Link>
             </li>
             <li>
-              <Link to="/about" onClick={() => setMenuIsOpen(!menuIsOpen)}>Sobre</Link>
+              <Link to="/about" onClick={() => setMenuIsOpen(!menuIsOpen)}>
+                Sobre
+              </Link>
             </li>
           </ul>
         </div>

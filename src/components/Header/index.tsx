@@ -55,7 +55,7 @@ export const Header = () => {
                   aria-label="Alternar modo escuro"
                   aria-pressed={darkMode}
                   onClick={() => setDarkMode((isDark) => !isDark)}
-                  className="text-xl hover:text-accent transition-colors cursor-pointer"
+                  className="w-8 h-8 flex items-center justify-center text-lg leading-none hover:text-accent transition-colors cursor-pointer"
                 >
                   ◐
                 </button>
